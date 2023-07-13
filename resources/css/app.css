@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* utils */
+@layer utilities {
+}
+
+/* components */
+@layer components {
+    .btn {
+        @apply p-3 rounded-md font-semibold;
+    }
+
+    .btn-pill {
+        @apply p-3 rounded-full font-semibold;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white shadow-primary shadow-2xl;
+    }
+
+    .btn-opposite {
+        @apply bg-white text-primary shadow-md;
+    }
+
+    .btn-outline {
+    }
+
+    .btn-link {
+        @apply text-primary;
+    }
+}

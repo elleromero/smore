@@ -17,3 +17,6 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia('Home');
 });
+Route::get('/signin', function() {
+    return Inertia('SignIn');
+});
