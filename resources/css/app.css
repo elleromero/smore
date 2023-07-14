@@ -8,6 +8,11 @@
 
 /* components */
 @layer components {
+    /* input */
+    .input {
+    }
+
+    /* buttons */
     .btn {
         @apply p-3 rounded-md font-semibold;
     }
@@ -17,7 +22,7 @@
     }
 
     .btn-primary {
-        @apply bg-primary text-white shadow-primary shadow-2xl;
+        @apply bg-primary text-white;
     }
 
     .btn-opposite {
