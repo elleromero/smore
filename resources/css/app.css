@@ -1,9 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* base */
+@layer base {
+    html {
+        font-family: Outfit, Arial, Helvetica, "ui-sans-serif", "sans-serif";
+    }
+}
+
 /* utils */
 @layer utilities {
+    .header-1 {
+        @apply text-[48px] font-black;
+    }
+
+    .header-2 {
+        @apply text-[36px] font-bold;
+    }
+
+    .header-3 {
+        @apply text-[30px] font-bold;
+    }
+
+    .header-4 {
+        @apply text-[24px] font-semibold;
+    }
+
+    .header-5 {
+        @apply text-[18px] font-semibold;
+    }
+
+    .header-6 {
+        @apply text-[16px] font-semibold;
+    }
 }
 
 /* components */

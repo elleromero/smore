@@ -6,7 +6,7 @@ export default function SignIn() {
     return (
         <main className="container mx-auto flex justify-between">
             <section className="left">
-                <h1>Sign In</h1>
+                <h1 className="header-1">Sign In</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
                     ipsum ex mollitia, quidem repellendus dolorem velit eveniet
