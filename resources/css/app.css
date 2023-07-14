@@ -46,7 +46,7 @@
 
     /* buttons */
     .btn {
-        @apply p-3 rounded-md font-semibold;
+        @apply p-3 rounded-md font-semibold my-5;
     }
 
     .btn-pill {
@@ -67,4 +67,14 @@
     .btn-link {
         @apply text-primary;
     }
+}
+
+/* custom */
+.blur-gradient {
+    @apply top-0 right-0 absolute w-[320px] h-[320px] rounded-full blur-2xl opacity-40;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(109, 103, 228, 1),
+        rgba(76, 0, 255, 0.3)
+    );
 }
