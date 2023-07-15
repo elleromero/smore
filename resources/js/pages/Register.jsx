@@ -1,5 +1,6 @@
 import React from "react";
 import InputComponent from "../components/InputComponent";
+import { Link } from "@inertiajs/react";
 
 export default function Register() {
     return (
@@ -20,9 +21,9 @@ export default function Register() {
 
                 <p>
                     Already have an account? Please&nbsp;
-                    <a href="" className="text-primary font-semibold">
-                        login
-                    </a>
+                    <Link href="/signin" className="text-primary font-semibold">
+                        Sign In
+                    </Link>
                 </p>
                 <button className="btn btn-primary shadow-primary shadow-2xl w-full">
                     Register

@@ -71,7 +71,7 @@
 
 /* custom */
 .blur-gradient {
-    @apply top-0 right-0 absolute w-[320px] h-[320px] rounded-full blur-2xl opacity-40;
+    @apply top-0 right-0 absolute w-[320px] h-[320px] rounded-full blur-2xl opacity-40 pointer-events-none -z-10;
     background: radial-gradient(
         circle at 50% 50%,
         rgba(109, 103, 228, 1),

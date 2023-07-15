@@ -1,6 +1,7 @@
 import React from "react";
 import InputComponent from "../components/InputComponent";
-import { EyeOff, Key, Mail } from "react-feather";
+import { Key, Mail } from "react-feather";
+import { Link } from "@inertiajs/react";
 
 export default function SignIn() {
     return (
@@ -15,9 +16,12 @@ export default function SignIn() {
                 </p>
                 <p className="mt-3">
                     If you don't have an account you can &nbsp;
-                    <a href="#" className="text-primary font-semibold">
+                    <Link
+                        href="/register"
+                        className="text-primary font-semibold"
+                    >
                         Register here
-                    </a>
+                    </Link>
                 </p>
 
                 <div className="blur-gradient"></div>

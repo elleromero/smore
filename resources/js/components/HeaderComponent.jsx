@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@inertiajs/react";
 
 export default function HeaderComponent() {
     return (
@@ -15,8 +16,14 @@ export default function HeaderComponent() {
                 </nav>
 
                 <div className="nav-right ml-auto">
-                    <button className="btn btn-link mx-5">Sign In</button>
-                    <button className="btn-pill btn-opposite">Register</button>
+                    <Link href="/signin">
+                        <button className="btn btn-link mx-5">Sign In</button>
+                    </Link>
+                    <Link href="/register">
+                        <button className="btn-pill btn-opposite">
+                            Register
+                        </button>
+                    </Link>
                 </div>
             </div>
         </header>
