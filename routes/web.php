@@ -23,3 +23,6 @@ Route::get('/signin', function() {
 Route::get('/register', function() {
     return Inertia('Register');
 });
+Route::get('/dashboard', function() {
+    return Inertia('Dashboard');
+});
