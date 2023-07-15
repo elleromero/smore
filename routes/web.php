@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/signin', function() {
     return Inertia('SignIn');
 });
+Route::get('/register', function() {
+    return Inertia('Register');
+});

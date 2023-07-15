@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeaderComponent() {
     return (
-        <header className="px-6 py-4">
+        <header className="px-6">
             <div className="container mx-auto flex items-center">
                 <span className="logo text-primary font-bold lowercase">
                     Smore
