@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -20,13 +21,21 @@ class AuthController extends Controller
         $user->profile_picture = 'C://Unknown';
 
         if ($user->save()) {
-            return redirect('/dashboard');
+            return redirect()->intended('/signin')->with('msg', 'Please login');
         }
-
-        return response('Something went wrong', 500);
+        
+        return back()->withErrors(["default" => "Something went wrong. Try again."]);
     }
 
-    public function sign_in() {}
+    public function sign_in(Request $req) {
+        if (Auth::attempt(["email" => $req->email, "password" => $req->password])) {
+            $req->session()->regenerate();
+
+            return redirect()->intended('/dashboard')->with("msg", "Logged in as" . Auth::user()->email);
+        }
+
+        return back()->withErrors(["default" => "Something went wrong. Try again."]);
+    }
 
     public function sign_out() {}
 }

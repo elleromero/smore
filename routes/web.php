@@ -29,3 +29,4 @@ Route::get('/dashboard', function() {
 });
 
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/signin', [AuthController::class, 'sign_in']);

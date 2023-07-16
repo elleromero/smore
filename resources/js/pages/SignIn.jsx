@@ -1,9 +1,19 @@
 import React from "react";
 import InputComponent from "../components/InputComponent";
 import { Key, Mail } from "react-feather";
-import { Link } from "@inertiajs/react";
+import { Link, useForm } from "@inertiajs/react";
 
 export default function SignIn() {
+    const { data, setData, post, processing, errors } = useForm({
+        email: "",
+        password: "",
+    });
+
+    function submit(e) {
+        e.preventDefault();
+        post("/signin");
+    }
+
     return (
         <main className="container mx-auto grid grid-cols-3 gap-x-9">
             <section className="left self-center relative">
@@ -31,12 +41,14 @@ export default function SignIn() {
                 <img src="/assets/svg/gummy-work-from-home.svg" alt="image" />
             </div>
 
-            <form action="" method="" className="self-center">
+            <form onSubmit={submit} className="self-center">
                 <InputComponent
                     type="text"
                     placeholder="Email"
                     name="email"
                     icon={Mail}
+                    value={data.email}
+                    onChange={(e) => setData("email", e.target.value)}
                 />
 
                 <InputComponent
@@ -44,6 +56,8 @@ export default function SignIn() {
                     placeholder="Password"
                     name="password"
                     icon={Key}
+                    value={data.password}
+                    onChange={(e) => setData("password", e.target.value)}
                 />
 
                 <div className="text-right">
@@ -55,6 +69,7 @@ export default function SignIn() {
                 <button
                     type="submit"
                     className="btn btn-primary shadow-primary shadow-2xl w-full mt-10"
+                    disabled={processing}
                 >
                     Sign In
                 </button>
