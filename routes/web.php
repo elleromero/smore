@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -26,3 +27,5 @@ Route::get('/register', function() {
 Route::get('/dashboard', function() {
     return Inertia('Dashboard');
 });
+
+Route::post('/register', [AuthController::class, 'register']);
