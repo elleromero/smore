@@ -14,6 +14,8 @@ export default function Register() {
                     <p>It's always free</p>
                 </div>
 
+                <InputComponent type="text" placeholder="Full Name" />
+                <InputComponent type="date" placeholder="Birthdate" />
                 <InputComponent type="text" placeholder="Username" />
                 <InputComponent type="email" placeholder="Email" />
                 <InputComponent type="password" placeholder="Password" />
